@@ -144,3 +144,62 @@ main {
     flex-grow: 1;
     cursor: crosshair;
 }
+
+/* =================================================================
+   7. REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
+   ================================================================= */
+
+/* Para telas com largura máxima de 1024px (Tablets em modo paisagem, laptops menores) */
+@media (max-width: 1024px) {
+    #left-bar {
+        width: 200px; /* Diminui a largura da barra lateral */
+        padding: 15px;
+    }
+
+    #left-bar h2 {
+        font-size: 1.1em; /* Diminui um pouco o tamanho do título */
+    }
+
+    .draggable-icon {
+        width: 60px; /* Ajusta o tamanho dos ícones na barra */
+    }
+    
+    .draggable-icon img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* Para telas com largura máxima de 768px (Tablets em modo retrato, celulares) */
+@media (max-width: 768px) {
+    #app-container {
+        /* Muda a organização de lado a lado para um em cima do outro */
+        flex-direction: column; 
+        height: auto; /* Permite que o conteúdo defina a altura */
+    }
+
+    #left-bar {
+        width: 100%; /* A barra lateral agora ocupa toda a largura */
+        height: auto; /* A altura se ajusta ao conteúdo */
+        border-right: none; /* Remove a borda direita */
+        border-bottom: 2px solid #333; /* Adiciona uma borda inferior */
+        flex-direction: row; /* Organiza as seções de Lancer/Utilidades lado a lado */
+        justify-content: space-around; /* Espaça as seções */
+        overflow-x: auto; /* Adiciona rolagem horizontal se não couber */
+    }
+
+    #left-bar section {
+        flex-shrink: 0; /* Impede que as seções encolham */
+    }
+
+    main {
+        height: calc(100vh - 160px); /* Ajusta a altura da área principal dinamicamente */
+    }
+
+    #top-bar {
+        flex-direction: column; /* Empilha os grupos de ferramentas */
+        gap: 10px;
+        padding: 10px;
+    }
+}
