@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FragPlanner - Planejador Tático</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app-container">
+        <aside id="left-bar">
+            <section id="lancers-section">
+                <h2>Lancers</h2>
+                <div id="lancers-list" class="icon-list">
+                    </div>
+            </section>
+            <section id="utilities-section">
+                <h2>Utilidades</h2>
+                <div id="utilities-list" class="icon-list">
+                    </div>
+            </section>
+        </aside>
+
+        <main>
+            <div id="top-bar">
+                <div class="tool-group">
+                    <label for="map-selector">Mapa:</label>
+                    <select id="map-selector">
+                        <option value="Akhet">Akhet</option>
+                        <option value="Blackmarket">Blackmarket</option>
+                        <option value="Dongtian">Dongtian</option>
+                        <option value="Naos">Naos</option>
+                        <option value="Outpost">Outpost</option>
+                        <option value="Tundra">Tundra</option>
+                        <option value="Yggdrasil">Yggdrasil</option>
+                    </select>
+                </div>
+
+                <div class="tool-group" id="drawing-tools">
+                    <button id="pen-tool" class="tool-btn" title="Caneta (Desenho Livre)">✏️</button>
+                    <button id="eraser-tool" class="tool-btn" title="Borracha">Borracha</button>
+                    <input type="color" id="color-picker" value="#00FFFF" title="Seletor de Cor">
+                </div>
+                
+                <div class="tool-group">
+                    <button id="save-image-btn" class="tool-btn" title="Salvar como Imagem">📷 Salvar</button>
+                    <button id="clear-all-btn" title="Limpar Tudo">🗑️</button>
+                </div>
+            </div>
+            
+            <canvas id="planner-canvas"></canvas>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
